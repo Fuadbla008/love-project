@@ -5,10 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+
 }
 
-.container{
+.container {
     width: 50%;
     min-height: 500px;
     border: 3px solid #000;
@@ -17,37 +17,56 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .hidden {
     display: none;
 }
-.flex{
+
+.flex {
     gap: 10px;
     display: flex;
 }
 
-/* From Uiverse.io by alexreyes091 */ 
+/* From Uiverse.io by alexreyes091 */
 .btn {
-  padding: 1rem 2rem;
-  font-weight: 700;
-  background: rgb(255, 255, 255);
-  color: blueviolet;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  border-bottom: 2px solid blueviolet;
-  border-right: 2px solid blueviolet;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  transition-duration: 1s;
-  transition-property: border-top, border-left, border-bottom, border-right,
-    box-shadow;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top, border-left, border-bottom, border-right,
+        box-shadow;
 }
 
 .btn:hover {
-  border-top: 2px solid blueviolet;
-  border-left: 2px solid blueviolet;
-  border-bottom: 2px solid rgb(238, 103, 238);
-  border-right: 2px solid rgb(238, 103, 238);
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-    rgba(240, 46, 170, 0.2) 15px 15px;
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+        rgba(240, 46, 170, 0.2) 15px 15px;
 }
 
+#typing {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #0f0;
+    animation: blink 0.7s infinite step-end;
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: #0f0;
+    }
+}

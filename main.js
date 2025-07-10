@@ -1,24 +1,22 @@
+const text = "I love you forever 💖";
+    const typingElement = document.getElementById('typing');
 
+    function typeLoop() {
+      let index = 0;
+      typingElement.innerHTML = '';
 
-import './ShinyText.css';
+      function typeLetter() {
+        if (index < text.length) {
+          typingElement.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeLetter, 100); // typing speed
+        } else {
+          // After complete, wait 3 seconds then restart
+          setTimeout(typeLoop, 3000);
+        }
+      }
 
-const ShinyText = ({ text, disabled = false, speed = 5, className = '' }) => {
-  const animationDuration = `${speed}s`;
+      typeLetter();
+    }
 
-  return (
-    <div
-      className={`shiny-text ${disabled ? 'disabled' : ''} ${className}`}
-      style={{ animationDuration }}
-    >
-      {text}
-    </div>
-  );
-};
-
-export default ShinyText;
-
-
-
-import ShinyText from './ShinyText';
-  
-<ShinyText text="Just some shiny text!" disabled={false} speed={3} className='custom-class' />
+    typeLoop(); // Start typing
