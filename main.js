@@ -48,3 +48,7 @@ function removeHiddenTag(id){
   const remov = document.getElementById(id);
   remov.classList.remove('hidden');
 }
+function addHiddenTag(id){
+  const added = document.getElementById(id);
+  added.set
+}
