@@ -44,8 +44,7 @@
 // });
 
 
-let btn = document.getElementById('noBtn');
-btn.addEventListener('click', function(){
-  const remove = document.getElementsByClassName('sec-con');
-  
-})
+function removeHiddenTag(id){
+  const remov = document.getElementById(id);
+  remov.classList.remove('hidden');
+}
