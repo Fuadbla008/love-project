@@ -1,25 +1,25 @@
-const text = "Do you love me 💖";
-    const typingElement = document.getElementById('typing');
+// const text = "Do you love me 💖";
+//     const typingElement = document.getElementById('typing');
 
-    function typeLoop() {
-      let index = 0;
-      typingElement.innerHTML = '';
+//     function typeLoop() {
+//       let index = 0;
+//       typingElement.innerHTML = '';
 
-      function typeLetter() {
-        if (index < text.length) {
-          typingElement.innerHTML += text.charAt(index);
-          index++;
-          setTimeout(typeLetter, 100); // typing speed
-        } else {
-          // After complete, wait 3 seconds then restart
-          setTimeout(typeLoop, 3000);
-        }
-      }
+//       function typeLetter() {
+//         if (index < text.length) {
+//           typingElement.innerHTML += text.charAt(index);
+//           index++;
+//           setTimeout(typeLetter, 100); // typing speed
+//         } else {
+//           // After complete, wait 3 seconds then restart
+//           setTimeout(typeLoop, 3000);
+//         }
+//       }
 
-      typeLetter();
-    }
+//       typeLetter();
+//     }
 
-    typeLoop(); // Start typing
+//     typeLoop(); // Start typing
 
 
 
